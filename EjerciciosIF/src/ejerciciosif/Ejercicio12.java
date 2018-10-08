@@ -25,7 +25,38 @@ private static Scanner sc = new Scanner(System.in);
 		System.out.println("Fecha 2: Año");
 		int anyo2 = sc.nextInt();
 		
+		int difdia = 0;
+		int difmes = 0;
+		int difanyo = 0;
+		int sumadias = 0;
 		
+		if (dia1 > dia2)
+			difdia = dia1 - dia2;
+		else if (dia2 > dia1)
+			difdia = dia2 - dia1;
+		////////////////////////////////////////
+		if (mes1 > mes2) {
+			difmes = (mes1 - mes2)*30;
 			
+		}
+		else if (mes2 > mes1) {
+			difmes = (mes2 - mes1)*30;
+		}
+		
+		if (difmes != 0)
+			sumadias = difmes - difdia;
+		////////////////////////////////////////	
+		if (anyo1 > anyo2)
+			difanyo = (anyo1 - anyo2)*360;
+		else if (anyo2 > anyo1)
+			difanyo = (anyo2 - anyo1)*360;
+		
+		if (difanyo != 0)
+			sumadias = difanyo - difdia;
+		////////////////////////////////////////
+		if (sumadias == 0)
+			sumadias = difdia;
+		
+		System.out.println("Entre el "+dia1+"-"+mes1+"-"+anyo1+" y el "+dia2+"-"+mes2+"-"+anyo2+" hay "+sumadias+" dias");
 	}
 }
