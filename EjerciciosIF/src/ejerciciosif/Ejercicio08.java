@@ -17,6 +17,9 @@ private static Scanner sc = new Scanner(System.in);
 		System.out.println("Año:");
 		int anyo = sc.nextInt();
 		
-		
+		if (dia >=1 && dia <=30 && mes >=1 && mes <=12)
+			System.out.println("Fecha correcta");
+		else
+			System.out.println("Fecha Incorrecta");
 	}
 }
