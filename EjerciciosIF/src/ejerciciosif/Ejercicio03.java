@@ -2,11 +2,11 @@ package ejerciciosif;
 
 import java.util.Scanner;
 
-public class Ejercicio01 {
+public class Ejercicio03 {
 
 	private static Scanner sc = new Scanner(System.in);
 	
-	//1. Pedir dos números y decir si son iguales o no
+	//3. Pedir dos números y decir si uno es múltiplo del otro
 	
 	public static void main(String[] args) {
 		
