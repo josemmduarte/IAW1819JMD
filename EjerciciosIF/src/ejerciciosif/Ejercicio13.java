@@ -18,12 +18,33 @@ private static Scanner sc = new Scanner(System.in);
 		//de 35 a 40 obesidad premórbida (obesidad de grado III) 
 		//>40 obesidad mórbida (obesidad de grado IV) 
 			//Nota 1: se recomienda el empleo de sentencias if–else anidadas. 
-			//Nota 2: Los operandos (peso y altura) deben ser introducidos por teclado 
-			//por el usuario.
+			//Nota 2: Los operandos (peso y altura) deben ser introducidos por teclado por el usuario.
 
 	public static void main(String[] args) {
 	
-		
-		
+		System.out.print("Peso: ");
+        float peso=sc.nextFloat();
+        
+        System.out.print("Altura: ");
+        float altura=sc.nextFloat();
+        
+        float icm = peso / (altura*2);
+        	
+        if (icm < 16)
+        	System.out.println("Criterio de ingreso en hospital");
+        else if (icm >= 16 && icm <= 17)
+        	System.out.println("infrapeso");
+        else if (icm > 17 && icm <= 18)
+        	System.out.println("bajo peso");
+        else if (icm > 18 && icm <= 25)
+        	System.out.println("peso normal (saludable)");
+        else if (icm > 25 && icm <= 30)
+        	System.out.println("sobrepeso (obesidad de grado I)");
+        else if (icm > 30 && icm <= 35)
+        	System.out.println("sobrepeso crónico (obesidad de grado II)");
+        else if (icm > 35 && icm <= 40)
+        	System.out.println("obesidad premórbida (obesidad de grado III)");
+        else if (icm > 40)
+        	System.out.println("obesidad mórbida (obesidad de grado IV)");
 	}
 }
