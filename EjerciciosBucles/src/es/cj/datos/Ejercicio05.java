@@ -18,7 +18,7 @@ public class Ejercicio05 {
 			factorial *= i;
 		}
 		
-		System.out.println("Factorial ");
+		System.out.println("Factorial: "+factorial);
 		
 		sc.close();
 	}
