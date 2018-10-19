@@ -8,7 +8,8 @@ public class Ejercicio07 {
 
 	public static void main(String[] args) {
 		
-		// 7.Pida un número al usuario e indique cuántos números primos hay entre 1 y el número
+		// 7.Pida un número al usuario e indique cuántos números primos hay entre 
+		// 1 y el número
 		
 		System.out.println("Numero: ");
 		int numero = 0;
@@ -38,6 +39,6 @@ public class Ejercicio07 {
 				primo = false;
 		}
 		
-		return false;
+		return primo;
 	}
 }
