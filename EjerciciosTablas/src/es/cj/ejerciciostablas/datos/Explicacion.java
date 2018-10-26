@@ -85,7 +85,7 @@ public class Explicacion {
 		
 		///////
 		
-		buscarPosiciones(numeros, 6);
+		//buscarPosiciones(numeros, 6);
 		
 		sc.close();
 	}
