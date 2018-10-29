@@ -10,8 +10,7 @@ public class Ejercicio06 {
 
 	private static Scanner sc = new Scanner(System.in);
 	static int num;
-	
-	private static int [] numeros;
+	private static int [] numeros, numeros2;
 	
 	public static void main(String[] args) {
 	
@@ -23,35 +22,30 @@ public class Ejercicio06 {
 		} while (tamanyo <=0);
 		
 		numeros = new int [tamanyo];
+		numeros2 = new int [tamanyo-1];
 		
 		iniciar();
-		mostrar();
+		System.out.println(Arrays.toString(numeros));
 		pedirNum(tamanyo);
-		eliminar();
 		desplazar();
-		mostrar();
+		System.out.println(Arrays.toString(numeros2));
 		
 		sc.close();
 	}
 	
 	private static void desplazar() {
-		for (int i = num; i < numeros.length-1; i++) {
-			
+		for (int i = 0; i < num; i++) {
+			numeros2[i]=numeros[i];
 		}
-	}
-
-	private static void eliminar() {
-		numeros[num]=0;
+		for (int j = num; j < numeros.length-1; j++) {
+			numeros2[j]=numeros[j+1];
+		}
 	}
 
 	private static void pedirNum(int var) {
 		var -= 1;
 		System.out.println("Elija un numero entre 0 y "+ var);
 		num = sc.nextInt();
-	}
-
-	private static void mostrar() {
-		System.out.println(Arrays.toString(numeros));
 	}
 
 	private static void iniciar() {
