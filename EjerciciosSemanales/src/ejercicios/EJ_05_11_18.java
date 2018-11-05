@@ -19,7 +19,6 @@ public class EJ_05_11_18 {
 		llenarTabla();
 		repetido();
 		System.out.println(Arrays.toString(tabla));
-		System.out.println(Arrays.toString(orden));
 		posicion();
 	}
 	
