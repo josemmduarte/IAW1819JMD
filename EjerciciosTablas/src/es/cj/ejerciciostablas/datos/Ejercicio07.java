@@ -4,8 +4,6 @@ import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
-import org.omg.Messaging.SyncScopeHelper;
-
 public class Ejercicio07 {
 	
 	// Se pretende desarrollar una aplicación que nos ayude a gestionar las notas de un centro educativo. 
