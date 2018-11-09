@@ -1,5 +1,7 @@
 package es.cj.cadenas;
 
+import java.util.Arrays;
+
 public class Explicacion {
 
 	public static void main(String[] args) {
@@ -45,5 +47,46 @@ public class Explicacion {
 		
 		//
 		System.out.println(cadena1.substring(0, 2));
+		
+		// convertir cadena en array
+		char letras [] = cadena1.toCharArray();
+		System.out.println(Arrays.toString(letras));
+		
+		// quitar espacio
+		String usuario =" javiyo ";
+		usuario = usuario.trim();
+		System.out.println(usuario);
+		
+		// cadena modificable
+		StringBuffer sb = new StringBuffer(cadena1);
+		
+			// añadir al final
+		sb.append("adios");
+		System.out.println(sb.toString());
+			// añadir en posicion
+		sb.insert(0, "Inicio");
+		System.out.println(sb.toString());
+			// borrar caracter
+		sb.deleteCharAt(7);
+			// remplazar
+		sb.replace(0, 3, "avion");
+		System.out.println(sb.toString());
+			// del reves
+		sb.reverse();
+		
+		// dividir
+		String frase = "Hola que tal estas 10;45;66";
+		String palabras [] = frase.split(" ");
+		
+		for (int i = 0; i < palabras.length; i++) {
+			System.out.println(palabras[i]);
+		}
+		
+		String [] numeros = palabras[4].split(";");
+		for (int i = 0; i < numeros.length; i++) {
+			System.out.println(numeros[i]);
+		}
+		
+		
 	}
 }
