@@ -8,18 +8,22 @@ public class Ejercicio04 {
 	// Escriba un método que, dada una cadena de caracteres, de la suma de todos los dígitos que hay en ella. 
 	// Por ejemplo, si la cadena es abc12de3f4, dará como resultado 10.
 
-	private static Scanner sc = new Scanner(System.in);
+	public static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
 		String cadena = "a64c2yfg8";
+		int suma = 0;
 		
-		char letras [] = cadena.toCharArray();
-		System.out.println(Arrays.toString(letras));
+		char tabla [] = cadena.toCharArray();
+		System.out.println(Arrays.toString(tabla));
 		
-		for (int i = 0; i < letras.length; i++) {
-			if (letras[0] >=0 && letras[0] <=9) {
+		for (int i = 0; i < tabla.length; i++) {
+			if (tabla[i] >=48 && tabla[i] <=59) {
+				String prueba = String.valueOf(tabla[i]);
+				suma += Integer.parseInt(prueba);
 			}
 		}
+		System.out.println(suma);
 	}	
 }

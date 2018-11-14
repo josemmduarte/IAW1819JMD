@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class Ejercicio02 {
 	// Realizar un programa que reciba dos cadenas de caracteres y cuente el número de apariciones de la primera en la segunda
 	
-	private static Scanner sc = new Scanner(System.in);
+	public static Scanner sc = new Scanner(System.in);
 	
 	public static void main(String[] args) {
 		
