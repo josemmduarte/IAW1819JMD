@@ -17,12 +17,12 @@ public class Metodos {
 				return 1;
 			}
 		
-		public static void esMayorDeEdad(Persona p) {
-			
-			boolean resul= false;
+		public static boolean esMayorDeEdad(Persona p) {
 			
 			if (p.getEdad()>=18)
-				resul = true;	
+				return true;
+			else
+				return false;
 		}
 }
 
