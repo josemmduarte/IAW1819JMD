@@ -1,5 +1,7 @@
 package es.cj.clases;
 
+import java.util.regex.Matcher;
+
 public class Circulo {
 	
 	//
@@ -7,7 +9,7 @@ public class Circulo {
 	private Puntos centro;
 	
 	//
-	private void Circolo() {
+	private void Circulo() {
 
 	}
 
@@ -42,6 +44,14 @@ public class Circulo {
 	//
 	public double calculardistanciadesde(Puntos p) {
 		return this.centro.calculardistanciadesde(p);
+	}
+	
+	public double calculararea() {
+		return Math.PI * Math.pow(radio, 2);
+	}
+	
+	public double calcularperimetro() {
+		return 2 * Math.PI * radio;
 	}
 	
 }
