@@ -34,7 +34,33 @@ public class AlumnosDAOlistas implements AlumnosDAO{
 
 	@Override
 	public void borrar(String nombre, String apellidos) {
+		for (Alumnos alum : alumnos) {
+			if (alum.getApellidos().equals(apellidos) && alum.getNombre().equals(nombre))
+				alumnos.remove(alum);
+		}
+	}
+
+	@Override
+	public void borrarTodo() {
+		alumnos.clear();
+	}
+
+	@Override
+	public Alumnos cambiarNota(Alumnos a, float nuevaNota) {
+		for (Alumnos alum : alumnos) {
+			if (alum.equals(a))
+				alum.setNota_expediente(nuevaNota);
+				return alum;
+		}
+		return a;
+	}
+
+	@Override
+	public void mostrarTodos() {
+		for (Alumnos alum : alumnos) {
+			System.out.println(alum);
+		}
 		
 	}
-	
 }
+
