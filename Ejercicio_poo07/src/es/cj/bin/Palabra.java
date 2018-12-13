@@ -66,6 +66,4 @@ public class Palabra {
 			return false;
 		return true;
 	}
-	
-	
 }
